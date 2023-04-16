@@ -1,7 +1,9 @@
 package com.example.cherrypickdemo.controller;
 
 import com.example.cherrypickdemo.service.MemberService;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,4 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     final MemberService memberService;
+
+    @GetMapping("/")
+    public String sayHello(){
+        return "hello,world";
+    }
 }
